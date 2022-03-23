@@ -5,7 +5,7 @@ const apiClient=axios.create({
     withCredentials: false,
     headers:{
         Acecept: 'application/json',
-        'Content-Type': 'apllication/json'
+        'Content-Type': 'application/json'
     }
     
 })
@@ -13,5 +13,8 @@ const apiClient=axios.create({
 export default{
     getEvent(){
         return apiClient.get('/event')
+    },
+    getOneEvent(){
+        return apiClient.get('/event/'+5928192)
     }
 }
